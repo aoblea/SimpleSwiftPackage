@@ -1,0 +1,15 @@
+load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library", "swift_test")
+
+swift_library(
+    name = "SimpleSwiftPackage",
+    srcs = glob(["Sources/SimpleSwiftPackage/**/*.swift"]),
+    module_name = "SimpleSwiftPackage",
+    visibility = ["//visibility:public"],
+)
+
+swift_test(
+    name = "SimpleSwiftPackageTests",
+    srcs = glob(["Tests/SimpleSwiftPackageTests/**/*.swift"]),
+    module_name = "SimpleSwiftPackageTests",
+    deps = [":SimpleSwiftPackage"],
+)

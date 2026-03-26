@@ -1,8 +1,30 @@
+# Ignore Bazel symlinks
+bazel-*
+
+# Ignore Bazel lock files
+/MODULE.bazel.lock
+
+# Ignore Swift and Xcode files
 .DS_Store
-/.build
-/Packages
-xcuserdata/
 DerivedData/
-.swiftpm/configuration/registries.json
-.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.build/
+xcuserdata/
+*.xcodeproj
+*.xcworkspace
 .netrc
+
+# Ignore Swift Package Manager files
+/Packages
+*.swiftpm
+
+# Ignore the local.bazelrc
+local.bazelrc
+
+# Ignore IntelliJ files
+.idea/
+
+# Ignore VSCode settings
+.vscode
+
+# Ignore Tuist
+/Derived/
